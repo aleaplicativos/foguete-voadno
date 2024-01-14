@@ -1,0 +1,62 @@
+html {
+	cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewbox='0 0 28 28' transform='translate(28 28) scale(2 2)' height='56' width='56'%3E%3Cpath d='M 2 2 l26 26' fill='%23000' stroke='%23ccc' stroke-width='1.4' /%3E%3Cpath d='M 2 2 l16 16' fill='%23000' stroke='brown' stroke-width='3' stroke-linecap='round' /%3E%3Cpath d='M 2 2 l1 1' stroke='%23000' stroke-width='3' stroke-linecap='round' /%3E%3Cpath d='M 2 2 l0 0' stroke='orange' stroke-width='3' stroke-linecap='round' /%3E%3C/svg%3E")
+			2 2,
+		auto;
+}
+body {
+	margin: 0 auto;
+	background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpattern id='stars' width='120' height='120' patternUnits='userSpaceOnUse'%3E%3Cpath fill='rgba(255,255,255, 1)' d='M 30 0 L 37 22 H 60 L 41 35 L 48 57 L 30 44 L 11 57 L 18 35 L 0 22 H 23 Z M 90 60 L 97 82 H 120 L 101 95 L 108 117 L 90 104 L 71 117 L 78 95 L 60 82 H 83 Z'/%3E%3C/pattern%3E%3Cpattern id='bars' width='120' height='120' patternUnits='userSpaceOnUse'%3E%3Crect fill='%23fff' height='120' width='120' /%3E%3Crect fill='red' height='30' width='120' y='0' /%3E%3Crect fill='red' height='30' width='120' y='60' /%3E%3C/pattern%3E%3Crect width='100%25' height='100%25' fill='%23192f5d' /%3E%3Crect width='100%25' height='50%25' fill='url(%23stars)' /%3E%3Crect width='100%25' height='50%25' y='50%25' fill='url(%23bars)' /%3E%3C/svg%3E");
+	overflow: hidden;
+}
+.body,
+.body2 {
+	background: radial-gradient(#000, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+	height: 100vh;
+	width: 100vw;
+	z-index: 1;
+}
+.body2 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	background: radial-gradient(
+		ellipse at top,
+		#fff,
+		rgba(255, 0, 0, 0.5),
+		rgba(255, 255, 0, 0.1)
+	);
+	z-index: 2;
+	transition: 500ms;
+	user-select: none;
+	pointer-events: none;
+}
+.firework {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 400px;
+	width: 400px;
+}
+#flame {
+	fill: orange;
+}
+#reset {
+	position: fixed;
+	left: 50%;
+	bottom: 20px;
+	z-index: 10;
+	padding: 8px;
+	transform: translate(-50%);
+	cursor: pointer;
+	background: rgba(255, 255, 255, 0.5);
+	font-weight: bold;
+	border-radius: 7px;
+	transition: 200ms;
+	border: 2px solid #ccc;
+}
+#reset:hover {
+	background: #fff;
+}
